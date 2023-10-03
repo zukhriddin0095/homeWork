@@ -80,17 +80,6 @@ const CategoryPage = () => {
   ];
 
 
-  async function searchData() {
-    try {
-      const {
-        data: { data },
-      } = await request.get(`/category?page=1&limit=10&search=${searchText}`);
-      setData(data);
-      getData()
-    }catch(err) {
-      message.error("serverda hatolik")
-    }
-  }
 
   // fetData
 

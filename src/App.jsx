@@ -16,7 +16,7 @@ const { isAuthenticated, role } = useContext(AuthContext);
       <ToastContainer />
       <Routes>
         {isAuthenticated && role === "admin" ? (
-          <Route path="/dashboard" element={<AdminLayout />}>
+          <Route path="/" element={<AdminLayout />}>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="categories" element={<CategoryPage />} />
             <Route path="users" element={<UsersPage />} />
